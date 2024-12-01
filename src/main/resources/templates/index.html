@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Médico</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 5px solid #0056b3;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin-bottom: 10px;
+            font-size: 3rem;
+        }
+
+        .header h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .programadoras {
+            background-color: #e2e6ea;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #343a40;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .btn-light {
+            color: #007bff;
+            background-color: white;
+            border: 2px solid #007bff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-light:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        #centros {
+            background-color: #d9edf7;
+        }
+
+        #pacientes {
+            background-color: #f2dede;
+        }
+
+        #servicios {
+            background-color: #dff0d8;
+        }
+
+        #feedback {
+            background-color: #fcf8e3;
+        }
+
+        #quienes-somos {
+            background-color: #f8f9fa;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #007bff;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Sistema Médico</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#centros">Centros Médicos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pacientes">Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#feedback">Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#quienes-somos">¿Quiénes Somos?</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Sistema Médico</h1>
+        <h2>Bienvenido a nuestra plataforma</h2>
+    </div>
+
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://img.lalr.co/cms/2017/10/13212423/ALENTA-FACHADA-17-01-07.jpg?size=xl" class="d-block w-100" alt="Centro Médico 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.seguralia.com/blog/wp-content/uploads/2023/05/colmedica-3.png" class="d-block w-100" alt="Centro Médico 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.epssanitas.com/usuarios/image/journal/article?img_id=1013064850&t=1723641594318" class="d-block w-100" alt="Centro Médico 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+
+        <section id="centros">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h3 class="card-title">Centros Médicos</h3>
+                    <p class="card-text">Nuestros centros médicos están equipados con tecnología de vanguardia y un equipo de profesionales altamente capacitados. Ofrecemos servicios en diversas especialidades, incluyendo medicina general, pediatría, ginecología, cardiología, ortopedia y más.</p>
+                    <p class="card-text">Cada centro está diseñado para brindar un ambiente cómodo y seguro para nuestros pacientes. Contamos con equipos de diagnóstico avanzados y laboratorios internos para facilitar la atención y tratamiento de nuestros pacientes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pacientes">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Pacientes</h3>
+                    <p class="card-text">Nuestros pacientes son nuestra prioridad. Proporcionamos atención personalizada y servicios diseñados para satisfacer sus necesidades de salud.</p>
+                    <p class="card-text">Fomentamos un ambiente inclusivo donde todos nuestros pacientes se sientan valorados y escuchados. Contamos con programas de atención domiciliaria para pacientes que requieren seguimiento especial y atención en la comodidad de su hogar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Servicios</h3>
+                    <p class="card-text">Ofrecemos una variedad de servicios de salud, que incluyen consultas médicas, atención de emergencias, pruebas diagnósticas y tratamientos especializados.</p>
+                    <p class="card-text">Entre nuestros servicios se incluyen:</p>
+                    <ul>
+                        <li>Consultas médicas generales y especializadas</li>
+                        <li>Pruebas de laboratorio y diagnósticos por imagen</li>
+                        <li>Atención de urgencias y emergencias</li>
+                        <li>Tratamientos ambulatorios y hospitalarios</li>
+                        <li>Programas de prevención y promoción de la salud</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Feedback</h3>
+                    <p class="card-text">Valoramos tu opinión. Por favor, déjanos tu feedback sobre nuestros servicios para poder mejorar continuamente.</p>
+                    <p class="card-text">Tu voz es esencial para ayudar a mejorar nuestros servicios y la atención que brindamos.</p>
+                    <blockquote class="quote">"La atención y el cuidado que recibí fueron excepcionales. Gracias por hacer que me sintiera valorado como paciente."</blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="quienes-somos">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">¿Quiénes Somos?</h3>
+                    <p class="card-text">Somos un equipo de profesionales de la salud dedicados a brindar atención médica de alta calidad. Nuestra misión es mejorar la salud y el bienestar de nuestros pacientes a través de una atención centrada en ellos.</p>
+                    <p class="card-text">Contamos con un personal comprometido y calificado, que trabaja arduamente para proporcionar un ambiente seguro y cómodo para todos.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="programadoras">
+            <h3>Desarrollado por Katerin Baez</h3>
+            <p>Un equipo dedicado al desarrollo de sistemas de salud.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sistema Médico. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

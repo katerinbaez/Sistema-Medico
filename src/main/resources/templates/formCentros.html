@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${centro == null ? 'Crear Centro' : 'Editar Centro'}"></title> <!-- Título dinámico -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 th:text="${centro == null ? 'Crear Centro' : 'Editar Centro'}"></h1> <!-- Título dinámico -->
+
+        <form th:action="@{${centro == null ? '/centros' : '/centros/' + centro.id}}" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" th:value="${centro.director.nombre}" required> <!-- Suponiendo que director tiene un nombre -->
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea class="form-control" id="descripcion" name="descripcion" required th:text="${centro.descripcion}"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="/centros" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

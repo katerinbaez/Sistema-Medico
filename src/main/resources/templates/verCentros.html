@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Centros</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Detalles del Centro</h1>
+        <div th:if="${centro}" class="card">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${centro.director.nombre}">Nombre del Director</h5> <!-- Mostrar el nombre del director -->
+                <p class="card-text" th:text="${centro.departamento.nombre}">Nombre del Departamento</p> <!-- Mostrar el nombre del departamento -->
+                <p class="card-text" th:text="${centro.pacientes.size()} + ' pacientes'">Número de Pacientes</p> <!-- Mostrar el número de pacientes -->
+                <p class="card-text" th:text="${centro.medicos.size()} + ' médicos'">Número de Médicos</p> <!-- Mostrar el número de médicos -->
+                <a th:href="@{/formCentros(id=${centro.id})}" class="btn btn-primary">Editar</a>
+                <a th:href="@{/eliminarCentro(id=${centro.id})}" class="btn btn-danger">Eliminar</a>
+            </div>
+        </div>
+        <a href="/formCentros" class="btn btn-secondary mt-3">Formulario de Centros</a> <!-- Cambiado a "Formulario de Centros" -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
