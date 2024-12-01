@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Paciente</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #343a40;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Detalles del Paciente</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ paciente.nombre }} {{ paciente.apellido }}</h5>
+                <p class="card-text">Edad: {{ paciente.edad }}</p>
+                <p class="card-text">Correo Electrónico: {{ paciente.email }}</p>
+            </div>
+        </div>
+        <a href="/pacientes" class="btn btn-secondary mt-3">Volver a la lista</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Médicos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #343a40;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Lista de Médicos</h1>
+        
+        <!-- Mostrar el mensaje de éxito si existe -->
+        <div th:if="${mensaje}" class="alert alert-success" role="alert">
+            <p th:text="${mensaje}"></p>
+        </div>
+        
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Especialidad</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="medico : ${medicos}">
+                    <td th:text="${medico.id}"></td>
+                    <td th:text="${medico.nombre}"></td>
+                    <td th:text="${medico.apellido}"></td>
+                    <td th:text="${medico.especialidad}"></td>
+                    <td th:text="${medico.email}"></td>
+                    <td>
+                        <a th:href="@{/medicos/editar/{id}(id=${medico.id})}" class="btn btn-warning">Editar</a>
+                        <a th:href="@{/medicos/ver/{id}(id=${medico.id})}" class="btn btn-info">Ver</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/medicos/nuevo" class="btn btn-success">Agregar Médico</a>
+    </div>
+</body>
+</html>

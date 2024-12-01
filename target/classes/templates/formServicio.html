@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Servicio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #343a40;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .btn-primary {
+            background-color: #0062cc;
+            border-color: #0062cc;
+        }
+        .btn-primary:hover {
+            background-color: #004bb5;
+            border-color: #004bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">{{ servicio.id != null ? 'Editar Servicio' : 'Nuevo Servicio' }}</h1>
+        <form action="{{ servicio.id != null ? '/servicios/editar/' + servicio.id : '/servicios' }}" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre del Servicio</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{ servicio.nombre }}" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción del Servicio</label>
+                <textarea class="form-control" id="descripcion" name="descripcion" rows="4" required>{{ servicio.descripcion }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">{{ servicio.id != null ? 'Actualizar' : 'Guardar' }}</button>
+        </form>
+        <a href="/servicios" class="btn btn-secondary mt-3">Volver a la lista</a>
+    </div>
+</body>
+</html>

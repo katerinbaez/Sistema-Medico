@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Departamento</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #343a40;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .btn-primary {
+            background-color: #0062cc;
+            border-color: #0062cc;
+        }
+        .btn-primary:hover {
+            background-color: #004bb5;
+            border-color: #004bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">{{ departamento.id != null ? 'Editar Departamento' : 'Nuevo Departamento' }}</h1>
+        <form action="{{ departamento.id != null ? '/departamentos/editar/' + departamento.id : '/departamentos' }}" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre del Departamento</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{ departamento.nombre }}" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea class="form-control" id="descripcion" name="descripcion" required>{{ departamento.descripcion }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">{{ departamento.id != null ? 'Actualizar' : 'Guardar' }}</button>
+        </form>
+        <a href="/departamentos" class="btn btn-secondary mt-3">Volver a la lista</a>
+    </div>
+</body>
+</html>
